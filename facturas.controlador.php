@@ -321,6 +321,12 @@ class ControladorFacturas{
 				
 
 				$actualizarNumeroControl = ModeloProductos::mdlActualizarProducto($tabla, $item1, $valor1, $item2, $valor2);
+
+				$tabla0 = "auditoria_numerocontrol";
+				$datos0 = array("numero_anterior" => $numeroControlGeneral,
+							   "numero_asignado" => $numeroControl,
+							   "controlador" => "ctrCrearFactura");
+				$guardarAuditoria = ModeloFacturas::mdlIngresarAuditoria($tabla0, $datos0);
 				
 				function generarParteHex($longitud) {
 					$caracteresHex = '0123456789ABCDEF'; // Caracteres hexadecimales
@@ -667,6 +673,12 @@ class ControladorFacturas{
 				
 
 				$actualizarNumeroControl = ModeloProductos::mdlActualizarProducto($tabla, $item1, $valor1, $item2, $valor2);
+
+				$tabla0 = "auditoria_numerocontrol";
+				$datos0 = array("numero_anterior" => $numeroControlGeneral,
+							   "numero_asignado" => $numeroControl,
+							   "controlador" => "ctrCrearFacturaContingencia");
+				$guardarAuditoria = ModeloFacturas::mdlIngresarAuditoria($tabla0, $datos0);
 				
 				function generarParteHex($longitud) {
 					$caracteresHex = '0123456789ABCDEF'; // Caracteres hexadecimales
@@ -1166,6 +1178,12 @@ class ControladorFacturas{
 				
 
 				$actualizarNumeroControl = ModeloProductos::mdlActualizarProducto($tabla, $item1, $valor1, $item2, $valor2);
+
+				$tabla0 = "auditoria_numerocontrol";
+				$datos0 = array("numero_anterior" => $numeroControlGeneral,
+							   "numero_asignado" => $numeroControl,
+							   "controlador" => "ctrCrearNotaRemision");
+				$guardarAuditoria = ModeloFacturas::mdlIngresarAuditoria($tabla0, $datos0);
 				
 				function generarParteHex($longitud) {
 					$caracteresHex = '0123456789ABCDEF'; // Caracteres hexadecimales
@@ -1454,6 +1472,12 @@ class ControladorFacturas{
 				
 
 				$actualizarNumeroControl = ModeloProductos::mdlActualizarProducto($tabla, $item1, $valor1, $item2, $valor2);
+
+				$tabla0 = "auditoria_numerocontrol";
+				$datos0 = array("numero_anterior" => $numeroControlGeneral,
+							   "numero_asignado" => $numeroControl,
+							   "controlador" => "ctrCrearNotaRemisionManual");
+				$guardarAuditoria = ModeloFacturas::mdlIngresarAuditoria($tabla0, $datos0);
 				
 				function generarParteHex($longitud) {
 					$caracteresHex = '0123456789ABCDEF'; // Caracteres hexadecimales
